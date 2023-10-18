@@ -13,3 +13,64 @@ body {
     height: 100vh;
     margin: 0;
 }
+
+.phone {
+    position: relative;
+    overflow: hidden;
+    width : 340px;
+    height : 600px;
+    border : 3px solid #eee;
+    border-radius: 15px;
+}
+
+.content {
+    opacity: 0;
+    position: absolute;
+    top : 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: calc(100% - 60px);
+    transition: opacity 0.4s ease;
+}
+
+.content.show {
+    opacity: 1;
+}
+
+.tab {
+    width : 100%;
+   position: absolute;
+   margin-top: -5px;
+   bottom: 0;
+   left : 0;
+}
+
+ul {
+    background-color: #fff;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    flex-direction: row;
+    list-style-type: none;
+   height: 60px;
+}
+
+ul > li {
+   color : #777;
+   cursor: pointer;
+   flex : 1;
+   padding: 10px;
+   text-align: center;
+}
+
+ li p {
+    font-size: 12px;
+    margin : 2px 0;
+}
+
+nav ul li:hover,
+nav ul li.active {
+    color: #8e44ad;
+}
+
